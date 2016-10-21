@@ -1,0 +1,5 @@
+<slick-slider *ngIf="sources">
+	<div *ngFor="let source of sources">
+		<img class="btn btn-lg" (click)="watchSource(source)" src="/assets/img/{{source.name}}.png" />
+	</div>
+</slick-slider>
