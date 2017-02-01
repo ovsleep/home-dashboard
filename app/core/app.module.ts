@@ -8,15 +8,15 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent }   from '../core/app.component';
 
-import { DeviceSelectorComponent } from '../remote/device-selector.component';
-import { ACComponent } from '../remote/ac.component';
+import { DeviceSelectorComponent } from '../remote/device-selector/device-selector.component';
+import { ChannelSelectorComponent } from '../remote/channel-selector/channel-selector.component';
+import { ACComponent } from '../remote/ac/ac.component';
 import { SlickSliderComponent } from '../core/slick-slider.component';
-import { SwitchComponent } from '../core/switch.component';
+import { AutoGrowComponent } from '../core/auto-grow.component';
+
+import { SwitchComponent } from 'angular2-bootstrap-switch/components';
 
 //Directives
-//import { SwitchDirective } from '../core/switch.directive';
-import { HighlightDirective } from '../core/highlight.directive';
-
 //import { routing } from './app.routing';
 
 @NgModule({
@@ -29,11 +29,12 @@ import { HighlightDirective } from '../core/highlight.directive';
      ],
   declarations: [ 
     AppComponent,
+    ChannelSelectorComponent,
     DeviceSelectorComponent,
     ACComponent,
     SlickSliderComponent,
+    AutoGrowComponent,
     SwitchComponent,
-    HighlightDirective
   ],
   bootstrap:    [ AppComponent ]
 })

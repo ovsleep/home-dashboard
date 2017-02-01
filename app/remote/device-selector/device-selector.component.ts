@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core'
 import { DeviceSource } from './device-source'
-import { RemoteService } from './remote.service';
+import { RemoteService } from '../remote.service';
 
 @Component({
     selector: 'device-selector',

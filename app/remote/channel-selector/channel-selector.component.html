@@ -1,0 +1,13 @@
+<div class="card card-block">
+    <div class="card-title">
+        <h3>On DirecTV</h3>
+    </div>
+    <div class="card-text">
+        <div *ngFor="let channel of channels">
+            <div class="btn btn-secondary cable-channel row" (click)="watchChannel(channel)">
+                <img src="https://d1oq4398v5395a.cloudfront.net/Thumbnail.ashx?image=LOGOS/canales/UY/{{channel.number}}.png&width=40&height=32"/>
+                <span>{{channel.current}}</span>
+            </div>
+        </div>
+    </div>
+</div>

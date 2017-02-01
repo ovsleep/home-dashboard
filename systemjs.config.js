@@ -27,7 +27,7 @@
        '@ng-bootstrap/ng-bootstrap': 'node_modules/@ng-bootstrap/ng-bootstrap/bundles/ng-bootstrap.js',
        'jquery': 'node_modules/jquery/dist/jquery.js',
        'slick-slider': 'node_modules/slick-carousel/slick/slick.js',
-       'bootstrap-switch': 'node_modules/bootstrap-switch/dist/js/bootstrap-switch.js',
+       'angular2-bootstrap-switch': 'node_modules/angular2-bootstrap-switch'
     },
     // packages tells the System loader how to load when no filename and/or no extension
     packages: {
@@ -36,6 +36,9 @@
         defaultExtension: 'js'
       },
       rxjs: {
+        defaultExtension: 'js'
+      },
+      'angular2-bootstrap-switch':{
         defaultExtension: 'js'
       }
     }

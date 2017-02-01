@@ -10,6 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var remote_service_1 = require('../remote/remote.service');
+var directv_service_1 = require('../remote/directv.service');
 var AppComponent = (function () {
     function AppComponent() {
         this.title = 'Home Dashboard';
@@ -19,7 +20,7 @@ var AppComponent = (function () {
             selector: 'home-dashboard',
             moduleId: module.id,
             templateUrl: "app.component.html",
-            providers: [remote_service_1.RemoteService]
+            providers: [remote_service_1.RemoteService, directv_service_1.DirectvService]
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);

@@ -1,0 +1,16 @@
+POST https://www.directv.com.uy/guia/Services/ProgrammingGuideAjax.asmx/GetProgramming HTTP/1.1
+Host: www.directv.com.uy
+Connection: keep-alive
+Content-Length: 88
+Accept: application/json, text/javascript, */*; q=0.01
+Origin: https://www.directv.com.uy
+X-Requested-With: XMLHttpRequest
+ADRUM: isAjax:true
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36
+Content-Type: application/json; charset=UTF-8
+Referer: https://www.directv.com.uy/guia/guia.aspx?type=&link=nav
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.8,es-419;q=0.6,es;q=0.4
+Cookie: visid_incap_525166=HRARGnazT+Gg8jcl87TemsO5blgAAAAAQUIPAAAAAADTOrSiiHuQAZpZaH/HeBdW; __qca=P0-137391346-1483651525579; QualtricsPopup_SV_b1TbC3kT3rbX1HL=1; DTVMID=kC6XRUgJAfVwAfBNs0CcAQu6a7EWX7NlUyA8DYE1A44y1aGm0ZweUGa1BpesA8LN; DTVMUI=d5=POST_PAID&d6=11 | 44 | 134 | 128&d7=False&d8=False&d9=True&d10=False&d11=Digital&d12=1816569&d13=kC6XRUgJAfVwAfBNs0CcAQu6a7EWX7NlUyA8DYE1A44y1aGm0ZweUGa1BpesA8LN; GTMUID=MTgxNjU2OQ==; csessions=1; csessionsSession=1; DTVMID=kC6XRUgJAfVwAfBNs0CcAQu6a7EWX7NlUyA8DYE1A44y1aGm0ZweUGa1BpesA8LN; ASP.NET_SessionId=xterrtiubfqnljmfna02tijf; PGCSS=16384; PGLang=S; PGCulture=es-UY; incap_ses_297_525166=h6TaAidIyR0WrTrwYygfBOwphlgAAAAAhAoMUE4hMoGZT72YpUCFoA==; incap_ses_298_525166=GouJL2R1IiDSPy3cjrYiBFXhiFgAAAAA1ejTMoU8k/Ax/JMjvk3nYw==; _gat=1; _gat_UserId=1; __utmt=1; DTVUA=GAID=a369d113-7083-43b6-b449-241d7e9c1719&CType=Client&PID=Unknown&MID=kC6XRUgJAfVwAfBNs0CcAQu6a7EWX7NlUyA8DYE1A44y1aGm0ZweUGa1BpesA8LN; DTVUASession=M_Checked|P_NOT_Checked; DTVCV=V2.0; ChannelDetailsURL=; PGCulture=es-UY; PGLang=S; PGCSS=16384; PGFILTERBYTYPE=; __utma=58389311.510055605.1483651526.1484577629.1485365593.5; __utmb=58389311.2.10.1485365593; __utmc=58389311; __utmz=58389311.1484536136.3.3.utmcsr=google|utmccn=(organic)|utmcmd=organic|utmctr=(not%20provided); _ga=GA1.3.510055605.1483651526; _vwo_uuid_v2=03FF2E64EFDE40CDCC974E43005218C7|9e305e1f9a93b9c3630a4a781f9050b1
+
+{ "day":25, "time":"14","minute":"30", "month":"1", "year":"2017", "onlyFavorites":"N" }

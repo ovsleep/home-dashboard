@@ -10,13 +10,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var http_1 = require('@angular/http');
-var mock_device_sources_1 = require('./mock-device-sources');
+var mock_device_sources_1 = require('./device-selector/mock-device-sources');
 require('rxjs/add/operator/toPromise');
 var RemoteService = (function () {
     function RemoteService(http) {
         this.http = http;
-        //baseUrl = 'http://192.168.1.101:9589/api/remote';
-        this.baseUrl = 'http://localhost:9589/api/remote';
+        this.baseUrl = 'http://192.168.1.101:9589/api/remote';
+        //baseUrl = 'http://localhost:9589/api/remote';
         this.headers = new http_1.Headers({ 'Content-Type': 'application/json' });
     }
     RemoteService.prototype.handleError = function (error) {
@@ -31,6 +31,7 @@ var RemoteService = (function () {
             .then(function (response) { return response.json().message == "OK!"; })
             .catch(this.handleError);
     };
+    /* ***** Select Device ******* */
     RemoteService.prototype.getDeviceSources = function () {
         return Promise.resolve(mock_device_sources_1.DEVICE_SOURCES);
     };
@@ -43,6 +44,16 @@ var RemoteService = (function () {
         };
         return this.sendCommand(command);
     };
+    RemoteService.prototype.watchChannel = function (channel) {
+        var command = {
+            'command': 'change',
+            'data': {
+                'channel': channel.number
+            }
+        };
+        return this.sendCommand(command);
+    };
+    /* ***** AC ******* */
     RemoteService.prototype.setAc = function (mode, temp) {
         var command = {
             'command': 'ac',

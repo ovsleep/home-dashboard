@@ -1,0 +1,16 @@
+.cable-channel{
+    width: 100%;
+    text-align: left;
+    margin-bottom: 5px;
+    background-color: #F6F6F6;
+    overflow: hidden;
+}
+.cable-channel span{
+    width: 95%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.cable-channel img{
+    margin-right: 10px;
+}

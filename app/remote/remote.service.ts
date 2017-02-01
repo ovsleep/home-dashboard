@@ -1,14 +1,17 @@
 import { Injectable } from '@angular/core'
 import { Headers, Http } from '@angular/http';
-import { DeviceSource } from './device-source'
-import { DEVICE_SOURCES } from './mock-device-sources';
+import { DeviceSource } from './device-selector/device-source'
+import { DEVICE_SOURCES } from './device-selector/mock-device-sources';
+
+import { CableChannel } from './channel-selector/cable-channel'
+import { CABLE_CHANNELS } from './channel-selector/mock-cable-channels';
 
 import 'rxjs/add/operator/toPromise';
 
 @Injectable()
 export class RemoteService {
-    //baseUrl = 'http://192.168.1.101:9589/api/remote';
-    baseUrl = 'http://localhost:9589/api/remote';
+    baseUrl = 'http://192.168.1.101:9589/api/remote';
+    //baseUrl = 'http://localhost:9589/api/remote';
     headers = new Headers({'Content-Type': 'application/json'});
     
     constructor(private http: Http) { }
@@ -27,6 +30,7 @@ export class RemoteService {
                 .catch(this.handleError);
     }
 
+    /* ***** Select Device ******* */    
     getDeviceSources(): Promise<[DeviceSource]> {
         return Promise.resolve(DEVICE_SOURCES); 
     }
@@ -42,6 +46,18 @@ export class RemoteService {
         return this.sendCommand(command);
     }
 
+    watchChannel(channel:CableChannel):Promise<boolean>{
+        let command = {
+            'command': 'change',
+            'data': {
+                'channel': channel.number
+            }
+        };
+
+        return this.sendCommand(command);
+    }
+    
+    /* ***** AC ******* */
     setAc(mode:string, temp: number):Promise<boolean>{
         let command = {
             'command': 'ac',
@@ -64,4 +80,6 @@ export class RemoteService {
 
         return this.sendCommand(command);
     }
+
+    
 }

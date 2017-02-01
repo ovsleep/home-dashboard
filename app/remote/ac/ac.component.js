@@ -9,32 +9,31 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var remote_service_1 = require('./remote.service');
-var DeviceSelectorComponent = (function () {
-    function DeviceSelectorComponent(remoteService) {
+var remote_service_1 = require('../remote.service');
+var ACComponent = (function () {
+    function ACComponent(remoteService) {
         this.remoteService = remoteService;
+        this.temp = 24;
+        this.mode = true;
     }
-    DeviceSelectorComponent.prototype.ngOnInit = function () {
-        this.getDeviceSources();
+    ACComponent.prototype.sendCommand = function () {
+        console.log("setting " + this.mode + " - " + this.temp);
+        this.remoteService.setAc(this.mode ? 'hot' : 'cold', this.temp);
     };
-    DeviceSelectorComponent.prototype.getDeviceSources = function () {
-        var _this = this;
-        this.remoteService.getDeviceSources().then(function (sources) { return _this.sources = sources; });
+    ACComponent.prototype.turnOff = function () {
+        console.log("turn off ac");
+        this.remoteService.off("ac");
     };
-    DeviceSelectorComponent.prototype.watchSource = function (source) {
-        console.log("watching " + source.name);
-        this.remoteService.watchDeviceSource(source);
-    };
-    DeviceSelectorComponent = __decorate([
+    ACComponent = __decorate([
         core_1.Component({
-            selector: 'device-selector',
+            selector: 'ac-remote',
             moduleId: module.id,
-            templateUrl: 'device-selector.component.html',
-            providers: []
+            templateUrl: 'ac.component.html',
+            styleUrls: ['ac.component.css']
         }), 
         __metadata('design:paramtypes', [remote_service_1.RemoteService])
-    ], DeviceSelectorComponent);
-    return DeviceSelectorComponent;
+    ], ACComponent);
+    return ACComponent;
 }());
-exports.DeviceSelectorComponent = DeviceSelectorComponent;
-//# sourceMappingURL=device-selector.component.js.map
+exports.ACComponent = ACComponent;
+//# sourceMappingURL=ac.component.js.map

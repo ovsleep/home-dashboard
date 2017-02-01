@@ -1,5 +1,5 @@
 import { Component } from '@angular/core'
-import { RemoteService } from './remote.service';
+import { RemoteService } from '../remote.service';
 
 @Component({
     selector: 'ac-remote',

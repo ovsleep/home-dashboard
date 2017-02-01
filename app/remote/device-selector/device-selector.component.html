@@ -1,0 +1,5 @@
+<slick-slider *ngIf="sources">
+	<div *ngFor="let source of sources">
+		<auto-grow><img class="btn btn-lg" (click)="watchSource(source)" src="/assets/img/{{source.name}}.png" /></auto-grow>
+	</div>
+</slick-slider>

@@ -15,13 +15,13 @@ var http_1 = require('@angular/http');
 //bootstrap
 var ng_bootstrap_1 = require('@ng-bootstrap/ng-bootstrap');
 var app_component_1 = require('../core/app.component');
-var device_selector_component_1 = require('../remote/device-selector.component');
-var ac_component_1 = require('../remote/ac.component');
+var device_selector_component_1 = require('../remote/device-selector/device-selector.component');
+var channel_selector_component_1 = require('../remote/channel-selector/channel-selector.component');
+var ac_component_1 = require('../remote/ac/ac.component');
 var slick_slider_component_1 = require('../core/slick-slider.component');
-var switch_component_1 = require('../core/switch.component');
+var auto_grow_component_1 = require('../core/auto-grow.component');
+var components_1 = require('angular2-bootstrap-switch/components');
 //Directives
-//import { SwitchDirective } from '../core/switch.directive';
-var highlight_directive_1 = require('../core/highlight.directive');
 //import { routing } from './app.routing';
 var AppModule = (function () {
     function AppModule() {
@@ -36,11 +36,12 @@ var AppModule = (function () {
             ],
             declarations: [
                 app_component_1.AppComponent,
+                channel_selector_component_1.ChannelSelectorComponent,
                 device_selector_component_1.DeviceSelectorComponent,
                 ac_component_1.ACComponent,
                 slick_slider_component_1.SlickSliderComponent,
-                switch_component_1.SwitchComponent,
-                highlight_directive_1.HighlightDirective
+                auto_grow_component_1.AutoGrowComponent,
+                components_1.SwitchComponent,
             ],
             bootstrap: [app_component_1.AppComponent]
         }), 
